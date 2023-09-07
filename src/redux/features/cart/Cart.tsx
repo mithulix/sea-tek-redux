@@ -4,14 +4,14 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from './ui/sheet';
+} from '../../../components/ui/sheet';
 import {
   HiMinus,
   HiOutlinePlus,
   HiOutlineShoppingCart,
   HiOutlineTrash,
 } from 'react-icons/hi';
-import { Button } from './ui/button';
+import { Button } from '../../../components/ui/button';
 import { IProduct } from '@/types/globalTypes';
 import { useAppDispatch, useAppSelector } from '@/redux/hook';
 import {

@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
-import { SignupForm } from '../components/SignUpForm';
+import { SignupForm } from './SignUpForm';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/sea-tek-logo-white.png';
 

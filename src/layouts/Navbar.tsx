@@ -10,7 +10,7 @@ import {
   DropdownMenuContent,
 } from '../components/ui/dropdown-menu';
 import { HiOutlineSearch } from 'react-icons/hi';
-import Cart from '../components/Cart';
+import Cart from '../redux/features/cart/Cart';
 import logo from '../assets/images/sea-tek-logo.png';
 
 export default function Navbar() {
