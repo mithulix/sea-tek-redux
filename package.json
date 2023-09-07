@@ -42,7 +42,6 @@
     "clsx": "^1.2.1",
     "cmdk": "^0.2.0",
     "date-fns": "^2.30.0",
-    "firebase": "^10.3.1",
     "lucide-react": "^0.233.0",
     "react": "^18.2.0",
     "react-day-picker": "^8.7.1",
@@ -52,8 +51,7 @@
     "react-router-dom": "^6.11.2",
     "redux-logger": "^3.0.6",
     "tailwind-merge": "^1.13.0",
-    "tailwindcss-animate": "^1.0.5",
-    "vercel": "^32.1.0"
+    "tailwindcss-animate": "^1.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
