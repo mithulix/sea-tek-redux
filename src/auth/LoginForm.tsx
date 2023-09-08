@@ -9,7 +9,7 @@ import { Label } from '@/components/ui/label';
 
 type UserAuthFormProps = React.HTMLAttributes<HTMLDivElement>;
 
-export function SignupForm({ className, ...props }: UserAuthFormProps) {
+export function LoginForm({ className, ...props }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
   async function onSubmit(event: React.SyntheticEvent) {
@@ -43,21 +43,13 @@ export function SignupForm({ className, ...props }: UserAuthFormProps) {
               placeholder="your password"
               type="password"
               autoCapitalize="none"
-              autoCorrect="off"
-              disabled={isLoading}
-            />
-            <Input
-              id="password"
-              placeholder="confirm password"
-              type="password"
-              autoCapitalize="none"
-              autoCorrect="off"
+              autoComplete="password"
               disabled={isLoading}
             />
           </div>
           <Button disabled={isLoading}>
             {isLoading && <p>loading</p>}
-            Create Account
+            Login with Email
           </Button>
         </div>
       </form>
