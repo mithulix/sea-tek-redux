@@ -1,7 +1,7 @@
-import ProductReview from '@/redux/features/products/ProductReview';
 import { Button } from '@/components/ui/button';
 import { useSingleProductQuery } from '@/redux/features/products/productApi';
 import { useParams } from 'react-router-dom';
+import ProductReview from './ProductReview';
 
 export default function ProductDetails() {
   const { id } = useParams();

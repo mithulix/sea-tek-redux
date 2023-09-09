@@ -2,9 +2,7 @@
   "name": "sea-tek-redux",
   "private": true,
   "version": "0.0.0",
-  "engines": {
-    "node": ">=16"
-  },
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -49,6 +47,7 @@
     "react": "^18.2.0",
     "react-day-picker": "^8.7.1",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.46.1",
     "react-icons": "^4.9.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.11.2",

@@ -1,11 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '@/App';
-import Login from '@/auth/Login';
+import Login from '@/components/Auth/Login';
 import NotFound from '@/pages/NotFound';
 import Home from '@/pages/Home';
-import Products from '@/redux/features/products/Products';
 import Checkout from '@/pages/Checkout';
-import Signup from '@/auth/Signup';
+import Signup from '@/components/Auth/Signup';
+import PrivateRoute from './PrivateRoute';
+import Products from '@/redux/features/products/Products';
 import ProductDetails from '@/redux/features/products/ProductDetails';
 
 const routes = createBrowserRouter([
@@ -27,7 +28,11 @@ const routes = createBrowserRouter([
       },
       {
         path: '/checkout',
-        element: <Checkout />,
+        element: (
+          <PrivateRoute>
+            <Checkout />,
+          </PrivateRoute>
+        ),
       },
     ],
   },

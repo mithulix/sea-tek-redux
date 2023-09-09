@@ -1,20 +1,27 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from '../../../components/ui/avatar';
-import { Button } from '../../../components/ui/button';
-import { Textarea } from '../../../components/ui/textarea';
 import { FiSend } from 'react-icons/fi';
-import { useGetCommentQuery, usePostCommentMutation } from './productApi';
+import {
+  useGetCommentQuery,
+  usePostCommentMutation,
+} from '@/redux/features/products/productApi';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+
 interface IProps {
   id: string;
 }
 
 export default function ProductReview({ id }: IProps) {
   const [inputValue, setInputValue] = useState<string>('');
+
   const { data } = useGetCommentQuery(id, {
-    refetchOnMountOrArgChange: true, 
-    pollingInterval: 20000
+    refetchOnMountOrArgChange: true,
+    pollingInterval: 30000,
   });
-  const [postComment, { isLoading, isError, isSuccess }] = usePostCommentMutation()
+  const [postComment, { isLoading, isError, isSuccess }] =
+    usePostCommentMutation();
+
   console.log(isLoading);
   console.log(isError);
   console.log(isSuccess);
@@ -27,8 +34,9 @@ export default function ProductReview({ id }: IProps) {
       id: id,
       data: { comment: inputValue },
     };
-    postComment(options),
-      setInputValue('');
+
+    postComment(options);
+    setInputValue('');
   };
 
   const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {

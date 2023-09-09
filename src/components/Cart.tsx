@@ -4,14 +4,15 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '../../../components/ui/sheet';
+} from './ui/sheet';
 import {
   HiMinus,
   HiOutlinePlus,
   HiOutlineShoppingCart,
   HiOutlineTrash,
 } from 'react-icons/hi';
-import { Button } from '../../../components/ui/button';
+import { Button } from './ui/button';
+import { IProduct } from '@/types/globalTypes';
 import { useAppDispatch, useAppSelector } from '@/redux/hook';
 import {
   addToCart,
